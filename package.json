@@ -1,6 +1,6 @@
 {
     "name": "@jackmacwindows/lua-types",
-    "version": "2.11.0",
+    "version": "2.11.1",
     "description": "TypeScript definitions for Lua standard library (ComputerCraft fork)",
     "keywords": [
         "lua",
@@ -24,7 +24,7 @@
         "singleQuote": true
     },
     "peerDependencies": {
-        "@jackmacwindows/typescript-to-lua": "^1.0.0"
+        "@jackmacwindows/typescript-to-lua": "^1.4.0"
     },
     "devDependencies": {
         "@types/jest": "^26.0.20",
@@ -33,6 +33,6 @@
         "jest-circus": "^26.6.3",
         "prettier": "^2.0.5",
         "ts-jest": "^26.5.3",
-        "@jackmacwindows/typescript-to-lua": "^1.0.1"
+        "@jackmacwindows/typescript-to-lua": "^1.4.0"
     }
 }

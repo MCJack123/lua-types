@@ -87,6 +87,18 @@ declare namespace math {
     function log(x: number, base?: number): number;
 }
 
+declare namespace table {
+    /**
+     * Moves elements from table a1 to table a2, performing the equivalent to the
+     * following multiple assignment: a2[t],··· = a1[f],···,a1[e]. The default for
+     * a2 is a1. The destination range can overlap with the source range. The
+     * number of elements to be moved must fit in a Lua integer.
+     *
+     * Returns the destination table a2.
+     */
+    function move<T1, T2 = T1>(a1: T1[], f: number, e: number, t: number, a2?: T2[]): (T2 | T1)[];
+}
+
 declare namespace string {
     /**
      * Returns a string that is the concatenation of n copies of the string s.
@@ -127,6 +139,16 @@ declare namespace string {
       * 'z' (see §6.4.2).
       */
      function packsize(fmt: string): number;
+}
+
+declare namespace coroutine {
+    /**
+     * Returns true when the running coroutine can yield.
+     *
+     * A running coroutine is yieldable if it is not the main thread and it is not
+     * inside a non-yieldable C function.
+     */
+    function isyieldable(): boolean;
 }
 
 declare namespace debug {
